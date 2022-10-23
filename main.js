@@ -9,13 +9,13 @@ async function init(){
     // Panel for list
     
     let listdiv = document.createElement("div");
-    listdiv.innerHTML = '<ul data-noblur="true" data-onshow="{geofs.initializePreferencesPanel()}" data-onhide="{geofs.savePreferencesPanel()}" class="geofs-list geofs-toggle-panel geofs-autoland-list geofs-preferences"><h3>Liveries</h3><div class="mdl-textfield mdl-js-textfield geofs-stopMousePropagation geofs-stopKeyupPropagation" style="width: 100%; padding-right: 86px;"><input class="mdl-textfield__input address-input" type="text" id="address" placeholder="Search" onkeydown="search(this.value)" id="searchlivery"><label class="mdl-textfield__label" for="searchlivery">Search</label></div><h6>Starred</h6><ul id="favorites" class="geofs-list geofs-visible"></ul><h6>For this aircraft</h6><ul id="liverylist" class=" geofs-list geofs-visible"></ul></ul>'
+    listdiv.innerHTML = '<ul data-noblur="true" data-onshow="{geofs.initializePreferencesPanel()}" data-onhide="{geofs.savePreferencesPanel()}" class="geofs-list geofs-toggle-panel geofs-autoland-list geofs-preferences"><h3>fed ex 757 </h3><div class="mdl-textfield mdl-js-textfield geofs-stopMousePropagation geofs-stopKeyupPropagation" style="width: 100%; padding-right: 86px;"><input class="mdl-textfield__input address-input" type="text" id="address" placeholder="Search" onkeydown="search(this.value)" id="searchlivery"><label class="mdl-textfield__label" for="searchlivery">Search</label></div><h6>Starred</h6><ul id="favorites" class="geofs-list geofs-visible"></ul><h6>For this aircraft</h6><ul id="liverylist" class=" geofs-list geofs-visible"></ul></ul>'
 
     document.getElementsByClassName("geofs-ui-left")[0].appendChild(listdiv);
 
     // Button for panel
     let buttonDiv = document.createElement("div");
-    buttonDiv.innerHTML = '<button class="mdl-button mdl-js-button geofs-f-standard-ui geofs-mediumScreenOnly" data-toggle-panel=".geofs-autoland-list" data-tooltip-classname="mdl-tooltip--top" id="liverybutton" tabindex="0" data-upgraded=",MaterialButton" onclick="listLiveries()">Liveries</button>' //onclick="listLiveries()"
+    buttonDiv.innerHTML = '<button class="mdl-button mdl-js-button geofs-f-standard-ui geofs-mediumScreenOnly" data-toggle-panel=".geofs-autoland-list" data-tooltip-classname="mdl-tooltip--top" id="liverybutton" tabindex="0" data-upgraded=",MaterialButton" onclick="listLiveries()">fed ex 757 livery click here</button>' //onclick="listLiveries()"
     document.body.appendChild(buttonDiv);
     document.getElementsByClassName("geofs-ui-bottom")[0].appendChild(buttonDiv);
     let element = document.getElementById("liverybutton");
@@ -25,10 +25,10 @@ async function init(){
     styles.innerHTML = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/><style>.checked {text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;color: rgb(255,193,7); display: inline; text align: right; cursor: pointer;}.nocheck {text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;color: white; display: inline; text align: right; cursor: pointer;}</style>';
     document.body.appendChild(styles);
 
-    //Load liveries
+    //Load livery
 
 
-    await fetch("https://raw.githubusercontent.com/iuhairways/GeoFS-addons/main/liverylist.json").then(res => res.json()).then(data => liveryobj = data)
+    await fetch("https://raw.githubusercontent.com/iuhairways/liverytesting/main/livery.json").then(res => res.json()).then(data => liveryobj = data)
 
 
     //remove original buttons
