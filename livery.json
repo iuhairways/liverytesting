@@ -1,0 +1,13 @@
+{
+	"aircrafts": {
+                "238": {
+                       "mode": [0],
+                       "parts": [0, 9, 23, 24, 25, 26, 27, 28, 29, 30, 37],
+	               "liveries": [{
+		                       "name": "fed ex",
+			               "texture": "https://i.ibb.co/zQNVTmK/Fed-Ex-757-200-livery.png"
+				}
+			]
+		}
+  }
+}
